@@ -1,9 +1,16 @@
 {% extends "base.html" %}
 
-{% block title %}日報アプリ{% endblock %}
+{% block title %}日報アプリ一覧{% endblock %}
 
 {% block content %}
     こちらは日報アプリのページになります
+    <div>
+        <ul>
+            {% for obj in object_list %}
+                <li>{{ obj.title }}</li>
+            {% endfor %}
+        </ul>
+    </div>
     <a href="{% url 'create' %}">日報の作成</a>
     <a href="{% url 'detail' 3 %}">今日のラッキーナンバー</a>
 {% endblock %}
