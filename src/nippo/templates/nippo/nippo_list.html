@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}日報アプリ{% endblock %}
+
+{% block content %}
+    こちらは日報アプリのページになります
+    <a href="{% url 'create' %}">日報の作成</a>
+    <a href="{% url 'detail' 3 %}">今日のラッキーナンバー</a>
+{% endblock %}
